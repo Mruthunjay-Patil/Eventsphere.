@@ -1,0 +1,6 @@
+{
+  "name": "weddingbazaar",
+  "description": "India's largest wedding and event planning platform to hire best vendors such as photographers, makeup artists, Mandap decorators, and caterers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

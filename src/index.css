@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-es-primary: #F04468;
+  --color-es-burgundy: #78283F;
+  --color-es-ivory: #FFFBF8;
+  --color-es-blush: #FFF0F3;
+  --color-es-ink: #20283A;
+  --color-es-teal: #238A80;
+}
+
+:root {
+  --es-primary: #F04468;
+  --es-primary-hover: #D93256;
+  --es-burgundy: #78283F;
+  --es-bg: #FFFBF8;
+  --es-surface: #FFFFFF;
+  --es-soft-pink: #FFF0F3;
+  --es-text: #20283A;
+  --es-muted: #707789;
+  --es-border: #E9E5E7;
+  --es-radius-card: 18px;
+  --es-radius-input: 10px;
+  --es-shadow-card: 0 5px 20px rgba(32, 40, 58, .06);
+}
+
+@layer base {
+  html, body, #root { min-height: 100%; }
+  /* Never allow sideways page scroll on phones (clip keeps sticky headers working). */
+  html, body { max-width: 100%; overflow-x: clip; }
+  body { min-width: 320px; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--es-bg); color: var(--es-text); -webkit-font-smoothing: antialiased; }
+  button, input, textarea, select { font-family: inherit; }
+  button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+  h1,h2,h3,h4,h5,h6 { color: var(--es-text); letter-spacing: -.025em; font-weight: 700; }
+  .editorial-heading { font-family: "Playfair Display", Georgia, serif; letter-spacing: -.035em; font-weight: 600; }
+  :focus-visible { outline: 3px solid rgba(240, 68, 104, .35); outline-offset: 2px; }
+  img { max-width: 100%; }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #F3F4F6; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #E83A59; }
+
+.auth-field{width:100%;border:1px solid #d6d3d1;border-radius:12px;padding:12px 16px;outline:none;background:#fff;color:#171717;font-family:inherit}.auth-field::placeholder{color:#b8b4b0}.auth-field:focus{border-color:#ef4563;box-shadow:0 0 0 3px rgba(239,69,99,.08)}
+
+.form-label{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#78716c;margin-bottom:7px}
+.form-field{width:100%;border:1px solid #e7e5e4;border-radius:12px;padding:11px 13px;background:#fff;color:#1c1917;outline:none;font-family:inherit;font-size:13px}
+.form-field:focus{border-color:#ef4563;box-shadow:0 0 0 3px rgba(239,69,99,.08)}
+
+/* Consistent, professional EventSphere form controls and icon alignment */
+.form-field, .auth-field { box-sizing: border-box; min-height: 44px; line-height: 1.4; }
+.form-field.pl-10, .auth-field.pl-10 { padding-left: 2.65rem; }
+.form-field + svg { pointer-events: none; }
+
+
+/* EventSphere premium marketplace foundations */
+::selection { background: #FFF0F3; color: #78283F; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #FFFBF8; }
+::-webkit-scrollbar-thumb { background: #E4CBD2; border: 2px solid #FFFBF8; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #F04468; }
+.form-label { color: #50596B; }
+.form-field, .auth-field { border-color: var(--es-border); border-radius: var(--es-radius-input); transition: border-color .18s ease, box-shadow .18s ease; }
+.form-field:focus, .auth-field:focus { border-color: var(--es-primary); box-shadow: 0 0 0 3px rgba(240,68,104,.12); }
+.es-card { border: 1px solid var(--es-border); border-radius: var(--es-radius-card); background: var(--es-surface); box-shadow: var(--es-shadow-card); }
+.es-muted { color: var(--es-muted); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+@media (max-width: 720px) { .form-field, .auth-field { font-size: 16px; } }
+
+/* Premium EventSphere authentication surface */
+.eventsphere-auth-backdrop{background:linear-gradient(180deg,rgba(32,40,58,.35),rgba(120,40,63,.30)),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85') center/cover fixed;backdrop-filter:blur(5px)}.eventsphere-auth-card{border-color:rgba(240,68,104,.2);box-shadow:0 24px 80px rgba(32,40,58,.28)}.eventsphere-auth-card>div:first-child{background:rgba(255,251,248,.97)}@media(max-width:640px){.eventsphere-auth-backdrop{background-position:center;background-attachment:scroll}.eventsphere-auth-card{max-height:calc(100dvh - 20px);border-radius:20px}}
